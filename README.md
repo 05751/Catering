@@ -10,10 +10,10 @@ A responsive, dependency-free catering website built with HTML, CSS, and vanilla
 
 ## Deploy to Render
 
-This is a plain static website: it does not need Node.js, a package installation, a server process, or a build step. The root-level `render.yaml` configures Render to publish the project root, including `index.html`, `styles.css`, `script.js`, and the `assets` folder.
+This is a plain static website: it does not need Node.js, a package installation, or a server process. The root-level `render.yaml` configures Render to run `echo "Static site: no build required"` as the build command and publish the project root, including `index.html`, `styles.css`, `script.js`, and the `assets` folder. Static sites do not have a start command.
 
 1. Push this project to a GitHub repository you can access. Make sure `render.yaml` is at the repository root.
-2. In Render, choose **New** → **Blueprint** and connect that repository. Render will read `render.yaml` and create the static site. Alternatively, choose **New** → **Static Site** and set the publish directory to `.` with no build command.
+2. In Render, choose **New** → **Blueprint** and connect that repository. Render will read `render.yaml` and create the static site. Alternatively, choose **New** → **Static Site**, use `echo "Static site: no build required"` as the build command, and set the publish directory to `.`. Leave the start command empty; it is not used for static sites.
 3. After deployment, open the Render URL and check the page, images, contact links, and mobile menu.
 
 Render can host the static website, but the enquiry form currently does not send or store submissions. Connect a form provider or backend before relying on it to receive quote requests.
