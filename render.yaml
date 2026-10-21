@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: glitz-and-glam-catering
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
